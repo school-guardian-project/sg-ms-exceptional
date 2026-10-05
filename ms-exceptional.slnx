@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/ms-exceptional.Api/ms-exceptional.Api.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/ms-exceptional.Tests/ms-exceptional.Tests.csproj" />
+  </Folder>
+</Solution>

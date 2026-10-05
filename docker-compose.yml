@@ -1,0 +1,28 @@
+services:
+  ms-exceptional.api:
+    container_name: ms-exceptional
+    image: ms-exceptional.api
+    build:
+      context: .
+      dockerfile: src/ms-exceptional.Api/Dockerfile
+    ports:
+      - "8080"
+    env_file:
+      - .env
+    networks:
+      - sg-services-network
+
+  ms-exceptional.tests:
+    container_name: ms-exceptional-tests
+    image: mcr.microsoft.com/dotnet/sdk:10.0
+    working_dir: /src
+    volumes:
+      - ./:/src
+    command: dotnet test ./tests/ms-exceptional.Tests/ --nologo
+    profiles: [ "tests" ]
+    networks:
+      - sg-services-network
+
+networks:
+  sg-services-network:
+    external: true

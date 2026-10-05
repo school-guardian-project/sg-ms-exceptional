@@ -1,0 +1,14 @@
+.env
+
+src/ms-exceptional.Api/bin
+src/ms-exceptional.Api/obj
+src/ms-exceptional.Api/appsettings.*
+tests/**/bin*/
+tests/**/obj*/
+
+.idea
+
+src/ms-exceptional.Api/Config
+
+bin/
+obj/
